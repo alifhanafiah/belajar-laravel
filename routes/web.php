@@ -28,5 +28,8 @@ use App\Models\Listings;
 // All listings
 Route::get('/', [ListingsController::class, 'index']);
 
-// Single Listing
+// Show create listing
+Route::get('/listing/create', [ListingsController::class, 'create']);
+
+// Single Listing (dynamic route have to be at the bottom)
 Route::get('/listing/{listing}', [ListingsController::class, 'show']);
